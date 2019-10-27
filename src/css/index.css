@@ -59,3 +59,8 @@ body{
     padding: 6px;
     margin-left: 20px;;
 }
+.add{
+    padding-top: 30px;
+    padding-left: 30px;
+    border-right: solid 2px white;
+}
