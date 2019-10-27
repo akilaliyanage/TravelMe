@@ -1,2 +1,2 @@
 # TravelMe
-<img src="https://github.com/KrisKasprzak/ILI9341_t3_controls">
+<img src="https://github.com/akilaliyanage/TravelMe/blob/master/Annotation%202019-10-27%20211742.png">
