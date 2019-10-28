@@ -11,6 +11,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/65c24a6e74.js" crossorigin="anonymous"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="834294027517-c85nd4r390k8suhku1naajvkmb41cb25.apps.googleusercontent.com">
+    <script src="src\js\index.js"></script>
     <title>TravelMe</title>
 </head>
 <body>
@@ -37,9 +41,6 @@
                     <li class="nav-item">
                       <a class="nav-link" href="#"><i class="fas fa-phone-square-alt"></i>  Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-question"></i>  FaQ</a>
-                    </li>
                     <li class="nal-item">
                         <a class="nav-link" href=""><i class="fas fa-envelope-open-text"></i>  akilaliyanage</a>
                     </li>
@@ -48,6 +49,9 @@
                     </li>
                     <li class="nav-item button">
                         <button class="btn btn-warning">Sign-In</button>
+                    </li>
+                    <li class="nav-item">
+                            <div class="g-signin2" data-onsuccess="onSignIn"></div>
                     </li>
                   </ul>
                 </div>
@@ -60,11 +64,9 @@
             <h2 class="main-head-2">Keep it back and <b>#travel</b> the <b>#GLOBE</b></h2>
 
             <div class="row row1">
-                <div class="col-md-3">
+                <div class="col-md-3 btncol">
                     <button class="btn btn1"><i class="fas fa-suitcase"></i>  Shedule</button>
-                </div>
-                <div class="col-md-3">
-                    <button class="btn btn1"><i class="far fa-compass"></i>  Explore</button>
+                    <button class="btn btn2"><i class="far fa-compass"></i>  Explore</button>
                 </div>
             </div>
         </div>
@@ -85,8 +87,44 @@
             </div>
         </div>
 
+
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-md-6">
+                <h1 class="main-head">What to do?</h1>
+                <h2 class="main-head-2">Here's the few things to fillup your journey..</h2>
+            </div>
+            
+            <div class="col-md-6">
+                <img src="src/img/flame-page-under-construction.png" alt="" class="main-img">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 wtdcol">
+                <button class="btn btn-warning wtd"><i class="fas fa-hotel"></i>  HOTEL</button>
+            </div>
+            <div class="col-md-4 wtdcol">
+                <button class="btn btn-success wtd"><i class="fas fa-directions"></i>  THINGS TO DO</button>
+            </div>
+            <div class="col-md-4 wtdcol">
+                <button class="btn btn-secondary wtd"><i class="fas fa-utensils"></i>  RESTAURENTS</button>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-4 wtdcol">
+                    <button class="btn btn-primary wtd"><i class="fas fa-air-freshener"></i>  VACCATION RENTALS</button>
+                </div>
+                <div class="col-md-4 wtdcol">
+                    <button class="btn btn-danger wtd"><i class="fas fa-fighter-jet"></i>>  FLIGHTS</button>
+                </div>
+                <div class="col-md-4 wtdcol">
+                    <button class="btn btn-dark wtd"><i class="fas fa-road"></i>  ROAD TRIPS</button>
+                </div>
+            </div>
+
+        <div class="row">
+            <div class="col-lg-12 feedback">
                 <h2 class="cus"><i class="fas fa-couch"></i>  What customers says about <b>#US</b></h2>
             </div>
         </div>
@@ -116,35 +154,47 @@
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
             </div>
-            <div class="col-sm-3">
-
-            </div>
 
         </div>
 
-        <div class="row bg-dark text-muted">
-            <div class="col-md-4 add">
-                <h4>Contact us</h4>
-                <h5><i class="fas fa-map-signs"></i>  Navigate to us</h5>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798467112149!2d79.97075581439516!3d6.914682820411294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae256db1a6771c5%3A0x2c63e344ab9a7536!2sSri%20Lanka%20Institute%20of%20Information%20Technology!5e0!3m2!1sen!2slk!4v1572191754038!5m2!1sen!2slk" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                <h4>Address</h4>
-                <p>
-<pre>
-    SLIIT,
-    New Kandy Road,
-    Malabe
-</pre>
-                </p>
-            </div>
+        <footer>
+                <div class="row bg-dark text-muted">
+                        <div class="col-md-4 add">
+                            <h4 class="foothead">Contact us</h4>
+                            <h5><i class="fas fa-map-signs"></i>  Navigate to us</h5>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798467112149!2d79.97075581439516!3d6.914682820411294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae256db1a6771c5%3A0x2c63e344ab9a7536!2sSri%20Lanka%20Institute%20of%20Information%20Technology!5e0!3m2!1sen!2slk!4v1572191754038!5m2!1sen!2slk" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
-            <div class="col-md-4">
-
-            </div>
-
-            <div class="col-md-4">
-
-            </div>
-        </div>
+                        </div>
+            
+                        <div class="col-md-4 add">
+                            <h4 class="foothead">Useful Links</h4>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Shedule Trip</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a href="#" class="nav-link"> Your Trips</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a href="#" class="nav-link">Bookings</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a href="#" class="nav-link">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="twitter-timeline nav-link" data-width="220" data-height="200" data-dnt="true" data-theme="dark" data-link-color="#2B7BB9" href="https://twitter.com/LiyanageAkila?ref_src=twsrc%5Etfw">Tweets by LiyanageAkila</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                </li>
+                            </ul>
+                        </div>
+            
+                        <div class="col-md-4 add">
+                            <h4 class="foothead">Who are #We</h4>
+                            <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                        </div>
+                    </div>
+        </footer>
     
 </body>
 </html>

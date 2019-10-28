@@ -24,18 +24,26 @@ body{
     padding-top: 18%;
     padding-left: 20%;
 }
-.btn1{
+.btn1,
+.btn2{
     background-color: rgba(51, 54, 58, 0.767);
     border:none;
 }
-.btn1:hover{
+.btn1:hover,
+.btn2:hover{
     background-color: rgba(139, 139, 139, 0.685);
+}
+.btn2{
+    margin-left: 20px;;
+}
+
+.btncol{
+    display: flex;
 }
 
 .row1{
     margin-top: 3%;
     margin-left: 18%;
-    padding:2px;
 }
 .para-1{
     margin-top: 50px;
@@ -45,7 +53,7 @@ body{
 .cus{
     text-align: center;
     margin-top: 30px;
-    color: rgb(126, 71, 0);
+    color: rgb(255, 255, 255);
 }
 .user{
     margin-top: 30px;
@@ -57,10 +65,32 @@ body{
 }
 .button{
     padding: 6px;
-    margin-left: 20px;;
+    margin-left: 7px;;
 }
 .add{
     padding-top: 30px;
     padding-left: 30px;
-    border-right: solid 2px white;
+}
+pre{
+    color: cornsilk;
+}
+.foothead{
+    color: darkgray;
+}
+.feedback{
+    background-image: url('../img/ios_13_ipados_green_dark_mode_4k.jpg');
+    background-size: cover;
+    height: 140px;
+    background-attachment: fixed;
+}
+.wtd{
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+}
+.wtdcol{
+    padding:20px 20px 20px 20px;
+}
+.g-signin2{
+    margin-top: 7px;
+    width: 10px;
 }
