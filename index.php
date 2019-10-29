@@ -13,8 +13,14 @@
     <script src="https://kit.fontawesome.com/65c24a6e74.js" crossorigin="anonymous"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="vendor\animate-scroll\animate-scroll.js"></script>
+    <script src="vendor\greensock-js\greensock-js\src\minified\EaselPlugin.min.js"></script>
+    <script src="vendor\greensock-js\greensock-js\src\minified\TweenMax.min.js"></script>
+    <script src="vendor\greensock-js\greensock-js\src\minified\ScrollToPlugin.min.js"></script>
     <meta name="google-signin-client_id" content="834294027517-c85nd4r390k8suhku1naajvkmb41cb25.apps.googleusercontent.com">
     <script src="src\js\index.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="vendor\scroll-reveal\scrollreveal.js"></script>
     <title>TravelMe</title>
 </head>
 <body>
@@ -70,14 +76,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <img src="src/img/page-not-found-4.png" alt="" class="main-img">
+        <div  class="col-md-6" >
+            <img src="src/img/page-not-found-4.png" alt="" class="main-img img1" >
         </div>
     </div>
 
     <div class="row">
             <div class="col-md-6">
-               <img src="src/img/flame.png" alt="" class="main-img">
+               <img src="src/img/flame.png" alt="" class="main-img img2">
             </div>
             <div class="col-md-6">
                <h1 class="mid-head-1"><b>GRAB</b> your <b>#phone</b> and schedule a trip</h1>
@@ -95,7 +101,7 @@
             </div>
             
             <div class="col-md-6">
-                <img src="src/img/flame-page-under-construction.png" alt="" class="main-img">
+                <img src="src/img/flame-page-under-construction.png" alt="" class="main-img wtdimg">
             </div>
         </div>
 
@@ -221,6 +227,101 @@
                         </div>
                     </div>
         </footer>
+
+        <script>
+             $(document).animateScroll();
+             window.sr = ScrollReveal();
+
+             sr.reveal('.img1',{
+                 duration:2000,
+                 origin:'top',
+            distance:'300px',
+            reset:true
+             });  
+
+             sr.reveal('.wtdimg',{
+                 duration:2000,
+                 origin:'right',
+            distance:'300px',
+            reset:true
+             }); 
+
+             sr.reveal('.navbar',{
+                 duration:2000,
+                 origin:'right',
+            distance:'300px',
+            reset:true
+             });
+
+             sr.reveal('.img2',{
+                 duration:2000,
+                 origin:'left',
+            distance:'300px',
+            viewFactor:0.2,
+            reset:true
+             }); 
+
+             sr.reveal('.main-head',{
+                 duration:2000,
+                 origin:'left',
+            distance:'300px',
+            viewFactor:0.2,
+            reset:true
+             }); 
+
+             sr.reveal('.main-head-2',{
+                 duration:2000,
+                 origin:'left',
+            distance:'300px',
+            viewFactor:0.2,
+            reset:true
+             }); 
+
+             sr.reveal('.btn1',{
+                 duration:2000,
+                 origin:'left',
+            distance:'300px',
+            viewFactor:0.2,
+            reset:true,
+            delay:1000
+             }); 
+
+             sr.reveal('.btn2',{
+                 duration:2000,
+                 origin:'left',
+            distance:'300px',
+            viewFactor:0.2,
+            reset:true,
+            delay:1000
+             });
+             
+             sr.reveal('.para-1',{
+                 duration:2000,
+                 origin:'right',
+            distance:'300px',
+            viewFactor:0.2,
+            reset:true,
+            delay:1000
+             });  
+
+             sr.reveal('.mid-head-1',{
+                 duration:2000,
+                 origin:'right',
+            distance:'300px',
+            viewFactor:0.3,
+            reset:true,
+            delay:1000
+             }); 
+
+             sr.reveal('.user',{
+                 duration:2000,
+                 origin:'right',
+            distance:'300px',
+            viewFactor:0.3,
+            reset:true,
+            delay:1000
+             }); 
+        </script>
     
 </body>
 </html>
