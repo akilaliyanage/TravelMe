@@ -71,7 +71,7 @@
 
             <div class="row row1">
                 <div class="col-md-3 btncol">
-                    <button class="btn btn1"><i class="fas fa-suitcase"></i>  Shedule</button>
+                    <a class="btn btn1" href="explore.php"><i class="fas fa-suitcase"></i>  Shedule</a>
                     <button class="btn btn2"><i class="far fa-compass"></i>  Explore</button>
                 </div>
             </div>
@@ -105,7 +105,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row ttd1">
             <div class="col-md-4 wtdcol">
                 <button class="btn btn-warning wtd"><i class="fas fa-hotel"></i>  HOTEL</button>
             </div>
@@ -117,7 +117,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row ttd2">
                 <div class="col-md-4 wtdcol">
                     <button class="btn btn-primary wtd"><i class="fas fa-air-freshener"></i>  VACCATION RENTALS</button>
                 </div>
@@ -257,15 +257,13 @@
                  duration:2000,
                  origin:'left',
             distance:'300px',
-            viewFactor:0.2,
             reset:true
              }); 
 
-             sr.reveal('.main-head',{
+             sr.reveal('.main-head-1',{
                  duration:2000,
                  origin:'left',
             distance:'300px',
-            viewFactor:0.2,
             reset:true
              }); 
 
@@ -273,7 +271,6 @@
                  duration:2000,
                  origin:'left',
             distance:'300px',
-            viewFactor:0.2,
             reset:true
              }); 
 
@@ -281,7 +278,6 @@
                  duration:2000,
                  origin:'left',
             distance:'300px',
-            viewFactor:0.2,
             reset:true,
             delay:1000
              }); 
@@ -290,7 +286,6 @@
                  duration:2000,
                  origin:'left',
             distance:'300px',
-            viewFactor:0.2,
             reset:true,
             delay:1000
              });
@@ -299,27 +294,42 @@
                  duration:2000,
                  origin:'right',
             distance:'300px',
-            viewFactor:0.2,
             reset:true,
-            delay:1000
              });  
 
              sr.reveal('.mid-head-1',{
                  duration:2000,
                  origin:'right',
             distance:'300px',
-            viewFactor:0.3,
             reset:true,
-            delay:1000
              }); 
 
              sr.reveal('.user',{
                  duration:2000,
                  origin:'right',
             distance:'300px',
-            viewFactor:0.3,
             reset:true,
-            delay:1000
+             }); 
+
+             sr.reveal('.ttd1',{
+                 duration:2000,
+                 origin:'right',
+            distance:'300px',
+            reset:true,
+             }); 
+
+             sr.reveal('.ttd2',{
+                 duration:2000,
+                 origin:'right',
+            distance:'300px',
+            reset:true,
+             }); 
+
+             sr.reveal('.para-2',{
+                 duration:2000,
+                 origin:'top',
+            distance:'300px',
+            reset:true,
              }); 
         </script>
     

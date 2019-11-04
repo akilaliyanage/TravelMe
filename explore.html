@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png "href="src\img\Serendib travels (2).png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src\css\explorer.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/65c24a6e74.js" crossorigin="anonymous"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="vendor\animate-scroll\animate-scroll.js"></script>
+    <script src="vendor\greensock-js\greensock-js\src\minified\EaselPlugin.min.js"></script>
+    <script src="vendor\greensock-js\greensock-js\src\minified\TweenMax.min.js"></script>
+    <script src="vendor\greensock-js\greensock-js\src\minified\ScrollToPlugin.min.js"></script>
+    <meta name="google-signin-client_id" content="834294027517-c85nd4r390k8suhku1naajvkmb41cb25.apps.googleusercontent.com">
+    <script src="src\js\index.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="vendor\scroll-reveal\scrollreveal.js"></script>
+    <title>Explore</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <!-- Brand -->
+                <a class="navbar-brand" href="#"><span><img src="src/img/Serendib travels (2).png" alt="logo" class="logo"></span> TravelMe</a>
+              
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="far fa-bookmark"></i>  Book Ur ticket</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="fas fa-tasks"></i>  Manage Trips</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="fas fa-phone-square-alt"></i>  Contact Us</a>
+                    </li>
+                    <li class="nal-item">
+                        <a class="nav-link" href=""><i class="fas fa-envelope-open-text"></i>  akilaliyanage</a>
+                    </li>
+                    <li class="nav-item button">
+                        <button class="btn btn-warning">Sign-Up</button>
+                    </li>
+                    <li class="nav-item button">
+                        <button class="btn btn-warning">Sign-In</button>
+                    </li>
+                    <li class="nav-item">
+                            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+    </header>
+    <div class="container container-fliud">
+        <div class="row section1">
+            <div class="col-lg-6 col-md-6 col-sm-12 sec1p1">
+                <h1 class="etw">Explore the world!</h1>
+                <h2 class="etw-2">Choose your destination from the below catagories</h2>
+
+                <div class="dropdown">
+                        <button class="btn btn-warning btn-toggle" data-toggle="dropdown">Choose the Country</button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li>akila</li>
+                        </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="src/img/pluto-delivery.png" alt="" class="img-responsive">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        $(document).animateScroll();
+         window.sr = ScrollReveal();
+
+         sr.reveal('.etw',{
+                 duration:2000,
+                 origin:'left',
+            distance:'300px',
+            reset:true
+             }); 
+
+             sr.reveal('.etw-2',{
+                 duration:2000,
+                 origin:'left',
+            distance:'300px',
+            reset:true
+             }); 
+
+             sr.reveal('.img-responsive',{
+                 duration:2000,
+                 origin:'right',
+            distance:'300px',
+            reset:true
+             }); 
+    </script>
+</body>
+</html>
