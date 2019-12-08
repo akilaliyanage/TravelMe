@@ -24,21 +24,35 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" style="box-shadow: 10px 10px;">
             <!--side bar-->
-            <div class="col-lg-3 col-md-3 d-none d-md-block d-lg-block bg-dark sidebar" style="overflow-y: auto;">
-                <div class="row mt-3 ml-1">
+            <div class="col-lg-3 col-md-3 d-none d-md-block bg-dark d-lg-block sidebar scrollbar scrollbar-primary" style="overflow-y: auto; box-shadow: 5px 0px 6px rgb(43, 43, 43);">
+                <div class="row mt-3" style="">
 
-                    <div class="col-lg-3 col-md-3">
-                        <img src="src/img/16.png" alt="" class="img-responsive rounded side-user-image" style="display: block; margin-left: auto; margin-right: auto;">
+                    <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                        <img src="src/img/16.png" alt="" class="img-responsive rounded side-user-image ml-auto mr-auto">
                     </div>
 
-                    <div class="col-lg-6 col-md-6">
-                        <p class="text-center">Akila Liyanage</p>
-                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="dropdown">
+                                <button class=" text-center btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="">
+                                       <p>Akila Liyanage</p>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                 <div class="card p-2">
+                                    <img src="src/img/16.png" alt="" class="card-img-top">
+                                    <div class="card-body text-center">
+                                        <h5>Akila Liyanage</h5>
 
-                    <div class="col-lg-3 col-md-3">
-                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        <hr>
+
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                 </div>
+                                </div>
+                              </div>
                     </div>
                 </div>
                 <hr>
@@ -52,8 +66,12 @@
                 <!--copplapse-sidebar-dashboard-->
 
                 <div class="p-2">
-                        <button data-toggle="collapse" data-target="#dashboard" class="btn btn-primary btn-block dropdown-toggle in p-2"><span><i class="fas fa-tachometer-alt"></i></span>  Dashboard <span class="badge badge-warning">10</span></button>
-                        <div id="dashboard" class="collapse in bg-light active show">
+                        <button style="" data-toggle="collapse" data-target="#dashboard" class="btn btn-outline-light btn-block dropdown-toggle in p-2"><span><i class="fas fa-tachometer-alt"></i></span>  Dashboard <span class="badge badge-warning">10</span></button>
+                        <div id="dashboard" class="collapse in bg-light active show dash" style="overflow-y:auto; height: 200px; "> 
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
                                 <a href="" class="dropdown-item bg-light">Dashboard 1</a>
                                 <a href="" class="dropdown-item bg-light">Dashboard 1</a>
                                 <a href="" class="dropdown-item bg-light">Dashboard 1</a>
@@ -63,12 +81,12 @@
 
                 <!--sidebar-down-->
                 <div class="p-2">
-                        <button data-toggle="collapse" data-target="#notifications" class="btn btn-primary btn-block dropdown-toggle"><span><i class="fas fa-flag-checkered"></i></span>  Notifications <span class="badge badge-danger">20</span></button>
+                        <button style=""  data-toggle="collapse" data-target="#notifications" class="btn btn-outline-light btn-block dropdown-toggle"><span><i class="fas fa-flag-checkered" style=";"></i></span>  Notifications <span class="badge badge-danger">20</span></button>
                         <div id="notifications" class="collapse bg-light show">
-                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
-                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
-                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
-                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Report 1</a>
+                                <a href="" class="dropdown-item bg-light">Report 1</a>
+                                <a href="" class="dropdown-item bg-light">Report 1</a>
+                                <a href="" class="dropdown-item bg-light">Report 1</a>
                         </div>
                 </div>
 
@@ -76,7 +94,7 @@
                 <!--sidebar-notification-->
 
                 <div class="p-2">
-                        <button data-toggle="collapse" data-target="#reports" class="btn btn-primary btn-block dropdown-toggle">Collapsible</button>
+                        <button data-toggle="collapse" data-target="#reports" class="btn btn-outline-light btn-block dropdown-toggle" style=""><span><i class="fas fa-book"></i></span>  Reports <span class="badge badge-info">1</span></button>
                         <div id="reports" class="collapse bg-light">
                                 <a href="" class="dropdown-item bg-light">Dashboard 1</a>
                                 <a href="" class="dropdown-item bg-light">Dashboard 1</a>
@@ -87,15 +105,25 @@
 
                 <hr>
 
+                <!--Bookmarks and Shedules-->
+
+                <div class="alert alert-danger">
+                    Bookmarks & Shedules
+                </div>
+
                       <!--sidebar-reports-->
 
-                      <button data-toggle="collapse" data-target="#demo" class="btn btn-primary btn-block dropdown-toggle">Collapsible</button>
-                      <div id="demo" class="collapse bg-light">
-                              <a href="" class="dropdown-item bg-light">Dashboard 1</a>
-                              <a href="" class="dropdown-item bg-light">Dashboard 1</a>
-                              <a href="" class="dropdown-item bg-light">Dashboard 1</a>
-                              <a href="" class="dropdown-item bg-light">Dashboard 1</a>
-                      </div>
+                     <div class="p-2">
+                            <button data-toggle="collapse" data-target="#demo" class="btn btn-outline-light btn-block dropdown-toggle"><span><i class="far fa-bookmark"></i></span> Bookmarks</button>
+                            <div id="demo" class="collapse bg-light">
+                                    <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                    <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                    <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                    <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                            </div>
+                     </div>
+
+
       
             </div>
 

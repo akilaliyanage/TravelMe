@@ -1,5 +1,5 @@
 .side-user-image{
-    width:100%
+    width:60%
 }
 body{
     margin: 0;
@@ -8,8 +8,18 @@ body{
 }
 .sidebar{
     height: 100%;
+    background-image: linear-gradient(right,black,white);
 }
 hr{
-    border: 2px solid rgb(110, 104, 104);
+   background-image: linear-gradient(rgb(24, 24, 29),rgb(123, 118, 123));
     border-radius: 10px;
+}
+.sidebar::-webkit-scrollbar{
+    display: none;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.dash::-webkit-scrollbar{
+    display: none;
 }
