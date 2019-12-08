@@ -221,6 +221,29 @@
                                 </div>
                           </div>
 
+
+                          <div class="row text-dark mt-2">
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                  <div class="card">
+                                      <div class="card-body">
+                                          <h5>Top Products</h5>
+                                          <canvas id="chart4"></canvas>
+                                      </div>
+                                  </div>
+                                </div>
+  
+                                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                      <div class="card">
+                                              <div class="card-body">
+                                                  <h5>Overall Summary</h5>
+                                                  <canvas id="chart5"></canvas>
+                                              </div>
+                                          </div>
+                                </div>
+  
+                                 
+                            </div>
+
             </div>
         </div>
     </div>
@@ -297,6 +320,56 @@
                         label:"income",
                         data:[10,20,30,50,10],
                         backgroundColor:['#FF7043','#FF5722','#F4511E','#E64A19'],
+                    }]
+                },
+                options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+
+            });
+
+
+
+
+            let chart4 = document.getElementById("chart4").getContext('2d');
+            let pro = new Chart(chart4,{
+                type:'radar',   //bar horizontalBar pie line dougnut radar polarArea
+                data:{
+                    labels:['HTML','CSS','JS','Anguler','React'],
+                    datasets:[{
+                        label:"income",
+                        data:[10,20,30,50,10],
+                        backgroundColor:['#8D6E63','#795548','#6D4C41','#5D4037'],
+                    }]
+                },
+                options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+
+            });
+
+
+            let chart5 = document.getElementById("chart5").getContext('2d');
+            let sum = new Chart(chart5,{
+                type:'bar',   //bar horizontalBar pie line dougnut radar polarArea
+                data:{
+                    labels:['HTML','CSS','JS','Anguler','React'],
+                    datasets:[{
+                        label:"income",
+                        data:[10,20,30,50,10],
+                        backgroundColor:['#00695C','#004D40','#A7FFEB','#64FFDA'],
                     }]
                 },
                 options: {
