@@ -20,14 +20,23 @@
         <!--font awsome-->
         <script src="https://kit.fontawesome.com/65c24a6e74.js" crossorigin="anonymous"></script>
 
+        <!--local Js-->
+        <script src="src/js/admin.js"></script>
+
+        <!--chart.js-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+
     <title>Admin</title>
 </head>
-<body>
+<body style="margin: 0; padding: 0;">
     <div class="container-fluid">
         <div class="row" style="box-shadow: 10px 10px;">
             <!--side bar-->
-            <div class="col-lg-3 col-md-3 d-none d-md-block bg-dark d-lg-block sidebar scrollbar scrollbar-primary" style="overflow-y: auto; box-shadow: 5px 0px 6px rgb(43, 43, 43);">
-                <div class="row mt-3" style="">
+            <div id="sidebar" class="col-lg-3 col-md-3 d-none d-md-block bg-dark d-lg-block sidebar scrollbar scrollbar-primary" style="overflow-y: auto; box-shadow: 5px 0px 6px rgb(43, 43, 43);">
+                <div class="row mt-3">
 
                     <div class="col-lg-6 col-md-6 col-sm-6 text-center">
                         <img src="src/img/16.png" alt="" class="img-responsive rounded side-user-image ml-auto mr-auto">
@@ -130,8 +139,181 @@
             <!--main container-->
             <div class="col-lg-9 col-md-9 col-sm-12 col-xm-12">
 
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top" style="position: sticky; box-shadow: 0 10px 10px rgb(43, 43, 43);">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                              <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                  <a class="nav-link" href="#">Pages <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#">Reports</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#">Appps</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    More
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Option 1</a>
+                                    <a class="dropdown-item" href="#">Option 2</a>
+                                    <a class="dropdown-item" href="#">Option 3</a>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+
+                          <div class="row mt-3">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xm-6 text-dark pl-5">
+                                <p><span><i class="fas fa-home"></i></span> Dashboard</p>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xm-6 text-right">
+                                <button class="btn btn-primary" title="Found a Bug?" data-toggle="tooltip" data-placement="bottom">
+                                        <i class="fas fa-bug"></i>
+                                </button>
+
+                                <button class="btn btn-secondary" title="notes" data-toggle="tooltip" data-placement="bottom">
+                                        <i class="fas fa-sticky-note"></i>
+                                </button>
+
+                                <button class="btn btn-warning" title="Add Action" data-toggle="tooltip" data-placement="bottom">
+                                        <i class="fas fa-plus"></i>
+                                </button>
+                                
+                                <button id="date" class="btn btn-success" data-toggle="tooltip" title="Today"> 
+
+                                </button>
+                            </div>
+                          </div>
+
+                          <div class="row text-dark mt-2">
+                              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Total Sales</h5>
+                                        <canvas id="chart1"></canvas>
+                                    </div>
+                                </div>
+                              </div>
+
+                              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <div class="card">
+                                            <div class="card-body">
+                                                <h5>Technologies</h5>
+                                                <canvas id="chart2"></canvas>
+                                            </div>
+                                        </div>
+                              </div>
+
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <div class="card">
+                                                <div class="card-body">
+                                                    <h5>Total Orders</h5>
+                                                    <canvas id="chart3"></canvas>
+                                                </div>
+                                        </div>
+                                </div>
+                          </div>
+
             </div>
         </div>
     </div>
+
+        <script>
+            $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+
+        <script>
+                var d = new Date();
+                document.getElementById("date").innerHTML = d.toDateString();
+        </script>
+
+        <script>
+            let chart1 = document.getElementById("chart1").getContext('2d');
+            let income = new Chart(chart1,{
+                type:'bar',   //bar horizontalBar pie line dougnut radar polarArea
+                data:{
+                    labels:['2019','2018','2017','2016'],
+                    datasets:[{
+                        label:"income",
+                        data:[3000,2000,3000,5000],
+                        backgroundColor:['#7E57C2','#673AB7','#5E35B1','#512DA8'],
+                    }]
+                },
+                options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+
+            });
+
+
+
+            let chart2 = document.getElementById("chart2").getContext('2d');
+            let tech = new Chart(chart2,{
+                type:'pie',   //bar horizontalBar pie line dougnut radar polarArea
+                data:{
+                    labels:['HTML','CSS','JS','Anguler','React'],
+                    datasets:[{
+                        label:"income",
+                        data:[10,20,30,50,10],
+                        backgroundColor:['#5C6BC0','#3F51B5','#3949AB','#303F9F'],
+                    }]
+                },
+                options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+
+            });
+
+
+
+            
+            let chart3 = document.getElementById("chart3").getContext('2d');
+            let orders = new Chart(chart3,{
+                type:'doughnut',   //bar horizontalBar pie line dougnut radar polarArea
+                data:{
+                    labels:['HTML','CSS','JS','Anguler','React'],
+                    datasets:[{
+                        label:"income",
+                        data:[10,20,30,50,10],
+                        backgroundColor:['#FF7043','#FF5722','#F4511E','#E64A19'],
+                    }]
+                },
+                options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+
+            });
+
+
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
 </body>
 </html>
