@@ -1,0 +1,15 @@
+.side-user-image{
+    width:100%
+}
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.sidebar{
+    height: 100%;
+}
+hr{
+    border: 2px solid rgb(110, 104, 104);
+    border-radius: 10px;
+}

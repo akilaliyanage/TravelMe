@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--bootstrap,jquery CDN-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!--tab icon-->
+        <link rel="shotcut icon" type="png/img" href="src/img/Serendib travels (2).png">
+
+        <!--local CSS-->
+        <link rel="stylesheet" href="src/css/admin.css">
+
+        <!--font awsome-->
+        <script src="https://kit.fontawesome.com/65c24a6e74.js" crossorigin="anonymous"></script>
+
+    <title>Admin</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!--side bar-->
+            <div class="col-lg-3 col-md-3 d-none d-md-block d-lg-block bg-dark sidebar" style="overflow-y: auto;">
+                <div class="row mt-3 ml-1">
+
+                    <div class="col-lg-3 col-md-3">
+                        <img src="src/img/16.png" alt="" class="img-responsive rounded side-user-image" style="display: block; margin-left: auto; margin-right: auto;">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <p class="text-center">Akila Liyanage</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <hr>
+
+                <!--alert-head-->
+
+                <div class="alert alert-danger">
+                    Dashboards
+                </div>
+
+                <!--copplapse-sidebar-dashboard-->
+
+                <div class="p-2">
+                        <button data-toggle="collapse" data-target="#dashboard" class="btn btn-primary btn-block dropdown-toggle in p-2"><span><i class="fas fa-tachometer-alt"></i></span>  Dashboard <span class="badge badge-warning">10</span></button>
+                        <div id="dashboard" class="collapse in bg-light active show">
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                        </div>
+                </div>
+
+                <!--sidebar-down-->
+                <div class="p-2">
+                        <button data-toggle="collapse" data-target="#notifications" class="btn btn-primary btn-block dropdown-toggle"><span><i class="fas fa-flag-checkered"></i></span>  Notifications <span class="badge badge-danger">20</span></button>
+                        <div id="notifications" class="collapse bg-light show">
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                        </div>
+                </div>
+
+
+                <!--sidebar-notification-->
+
+                <div class="p-2">
+                        <button data-toggle="collapse" data-target="#reports" class="btn btn-primary btn-block dropdown-toggle">Collapsible</button>
+                        <div id="reports" class="collapse bg-light">
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                                <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                        </div>
+                </div>
+
+                <hr>
+
+                      <!--sidebar-reports-->
+
+                      <button data-toggle="collapse" data-target="#demo" class="btn btn-primary btn-block dropdown-toggle">Collapsible</button>
+                      <div id="demo" class="collapse bg-light">
+                              <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                              <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                              <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                              <a href="" class="dropdown-item bg-light">Dashboard 1</a>
+                      </div>
+      
+            </div>
+
+            <!--main container-->
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xm-12">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
