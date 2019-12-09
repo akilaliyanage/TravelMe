@@ -5,4 +5,4 @@ you can make reservations and plan trips as your desire
 <h2>Section 2</h2>
 <img src="https://github.com/akilaliyanage/TravelMe/blob/master/src/img/sh3.PNG">
 <h2>Admin Page</h2>
-<img src="Capture.PNG>
+<img src="https://github.com/akilaliyanage/TravelMe/Capture.PNG>
